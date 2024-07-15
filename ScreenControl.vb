@@ -124,8 +124,9 @@ Public Class ScreenControl
 
     Public Sub CargaPantallas()
         'Carpetas.SelectedPath = "\\" & IP_IPF & "\r\Recursos Pantallas\" & Tarjeta.Persona & "\" & DateTime.Now.ToString("dd_MM_yyyy") & "\"
+
         Carpetas.SelectedPath = rsc
-        Dim dir As IO.DirectoryInfo = New IO.DirectoryInfo(Carpetas.SelectedPath)
+        Dim dir As DirectoryInfo = New DirectoryInfo(Carpetas.SelectedPath)
 
         cmbEDICION.DataSource = dir.GetDirectories
         cmbEmision.DataSource = dir.GetDirectories
@@ -150,7 +151,46 @@ Public Class ScreenControl
 
     End Sub
 
-    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles btnUp.Click
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+
+        Try
+
+            While objLISTPLAYLIST2.SelectedItems.Count > 0
+
+                objLISTPLAYLIST2.Items.Remove(objLISTPLAYLIST2.SelectedItems(0))
+
+
+            End While
+
+            'secciones_JUGADORES = objLISTPLAYLIST.Items.Count
+
+            'ActualizaJugadores()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+    Private Sub btnBorrarPlayer_Click(sender As Object, e As EventArgs) Handles btnBorrarPlayer.Click
+        Try
+
+            While oblLISTPLAYER.SelectedItems.Count > 0
+
+                oblLISTPLAYER.Items.Remove(oblLISTPLAYER.SelectedItems(0))
+
+
+            End While
+
+            'secciones_JUGADORES = objLISTPLAYLIST.Items.Count
+
+            'ActualizaJugadores()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
 
         Try
             Dim item As ListViewItem = objLISTPLAYLIST2.SelectedItems(0)
@@ -176,8 +216,29 @@ Public Class ScreenControl
         End Try
 
     End Sub
+    Private Sub btnUpPlayer_Click(sender As Object, e As EventArgs) Handles btnUpPlayer.Click
+        Try
+            Dim item As ListViewItem = oblLISTPLAYER.SelectedItems(0)
 
-    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles btnDown.Click
+            If item.Index = 0 Then
+                Return
+            End If
+
+            Dim pos As Integer = item.Index - 1
+
+            oblLISTPLAYER.Items.RemoveAt(item.Index)
+
+            oblLISTPLAYER.Items.Insert(pos, item)
+
+            oblLISTPLAYER.Focus()
+            oblLISTPLAYER.Items(pos).Selected = True
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnDown_Click(sender As Object, e As EventArgs) Handles btnDown.Click
 
         Try
             Dim item As ListViewItem = objLISTPLAYLIST2.SelectedItems(0)
@@ -203,29 +264,27 @@ Public Class ScreenControl
         End Try
 
     End Sub
-
-    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-
+    Private Sub btnDownPlayer_Click(sender As Object, e As EventArgs) Handles btnDownPlayer.Click
         Try
+            Dim item As ListViewItem = oblLISTPLAYER.SelectedItems(0)
 
-            While objLISTPLAYLIST2.SelectedItems.Count > 0
+            If item.Index = (oblLISTPLAYER.Items.Count - 1) Then
+                Return
+            End If
 
-                objLISTPLAYLIST2.Items.Remove(objLISTPLAYLIST2.SelectedItems(0))
+            Dim pos As Integer = item.Index + 1
 
+            oblLISTPLAYER.Items.RemoveAt(item.Index)
 
-            End While
+            oblLISTPLAYER.Items.Insert(pos, item)
 
-            'secciones_JUGADORES = objLISTPLAYLIST.Items.Count
-
-            'ActualizaJugadores()
+            oblLISTPLAYER.Focus()
+            oblLISTPLAYER.Items(pos).Selected = True
 
         Catch ex As Exception
 
         End Try
-
     End Sub
-
-
 
     Public Sub cargaPLAYLIST_PLAYER()
 

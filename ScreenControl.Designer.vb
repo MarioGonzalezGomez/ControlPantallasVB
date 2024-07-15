@@ -62,6 +62,17 @@ Partial Class ScreenControl
         Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnDownPlayer = New System.Windows.Forms.Button()
+        Me.btnUpPlayer = New System.Windows.Forms.Button()
+        Me.btnBorrarPlayer = New System.Windows.Forms.Button()
+        Me.oblLISTPLAYER = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.PicElementPlayer = New System.Windows.Forms.PictureBox()
+        Me.PicFondoPlayer = New System.Windows.Forms.PictureBox()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
@@ -70,17 +81,6 @@ Partial Class ScreenControl
         Me.cmbEmision = New System.Windows.Forms.ComboBox()
         Me.Buscador = New System.Windows.Forms.OpenFileDialog()
         Me.Carpetas = New System.Windows.Forms.FolderBrowserDialog()
-        Me.PicElementPlayer = New System.Windows.Forms.PictureBox()
-        Me.PicFondoPlayer = New System.Windows.Forms.PictureBox()
-        Me.oblLISTPLAYER = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnDownPlayer = New System.Windows.Forms.Button()
-        Me.btnUpPlayer = New System.Windows.Forms.Button()
-        Me.btnBorrarPlayer = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.lstObjectEDICION, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,8 +254,8 @@ Partial Class ScreenControl
         Me.objImagen1.AspectName = "Nombre"
         Me.objImagen1.CellPadding = Nothing
         Me.objImagen1.FillsFreeSpace = True
-        Me.objImagen1.Text = "IZQ"
-        Me.objImagen1.Width = 107
+        Me.objImagen1.Text = "ARCHIVO"
+        Me.objImagen1.Width = 285
         Me.objImagen1.WordWrap = True
         '
         'brnReload
@@ -499,6 +499,111 @@ Partial Class ScreenControl
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "PLAYER"
         '
+        'btnDownPlayer
+        '
+        Me.btnDownPlayer.BackColor = System.Drawing.Color.LightSlateGray
+        Me.btnDownPlayer.BackgroundImage = CType(resources.GetObject("btnDownPlayer.BackgroundImage"), System.Drawing.Image)
+        Me.btnDownPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDownPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDownPlayer.ForeColor = System.Drawing.Color.Transparent
+        Me.btnDownPlayer.Location = New System.Drawing.Point(720, 406)
+        Me.btnDownPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnDownPlayer.Name = "btnDownPlayer"
+        Me.btnDownPlayer.Size = New System.Drawing.Size(20, 33)
+        Me.btnDownPlayer.TabIndex = 138
+        Me.btnDownPlayer.UseVisualStyleBackColor = False
+        '
+        'btnUpPlayer
+        '
+        Me.btnUpPlayer.BackColor = System.Drawing.Color.LightSlateGray
+        Me.btnUpPlayer.BackgroundImage = CType(resources.GetObject("btnUpPlayer.BackgroundImage"), System.Drawing.Image)
+        Me.btnUpPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUpPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpPlayer.ForeColor = System.Drawing.Color.Transparent
+        Me.btnUpPlayer.Image = CType(resources.GetObject("btnUpPlayer.Image"), System.Drawing.Image)
+        Me.btnUpPlayer.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnUpPlayer.Location = New System.Drawing.Point(720, 365)
+        Me.btnUpPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnUpPlayer.Name = "btnUpPlayer"
+        Me.btnUpPlayer.Size = New System.Drawing.Size(20, 33)
+        Me.btnUpPlayer.TabIndex = 137
+        Me.btnUpPlayer.UseVisualStyleBackColor = False
+        '
+        'btnBorrarPlayer
+        '
+        Me.btnBorrarPlayer.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.btnBorrarPlayer.BackgroundImage = CType(resources.GetObject("btnBorrarPlayer.BackgroundImage"), System.Drawing.Image)
+        Me.btnBorrarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnBorrarPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrarPlayer.Image = CType(resources.GetObject("btnBorrarPlayer.Image"), System.Drawing.Image)
+        Me.btnBorrarPlayer.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnBorrarPlayer.Location = New System.Drawing.Point(720, 247)
+        Me.btnBorrarPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnBorrarPlayer.Name = "btnBorrarPlayer"
+        Me.btnBorrarPlayer.Size = New System.Drawing.Size(24, 33)
+        Me.btnBorrarPlayer.TabIndex = 139
+        Me.btnBorrarPlayer.UseVisualStyleBackColor = False
+        '
+        'oblLISTPLAYER
+        '
+        Me.oblLISTPLAYER.BackColor = System.Drawing.Color.LightGray
+        Me.oblLISTPLAYER.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader8})
+        Me.oblLISTPLAYER.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.oblLISTPLAYER.ForeColor = System.Drawing.Color.Gray
+        Me.oblLISTPLAYER.FullRowSelect = True
+        Me.oblLISTPLAYER.GridLines = True
+        Me.oblLISTPLAYER.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.oblLISTPLAYER.HideSelection = False
+        Me.oblLISTPLAYER.Location = New System.Drawing.Point(18, 67)
+        Me.oblLISTPLAYER.Name = "oblLISTPLAYER"
+        Me.oblLISTPLAYER.Size = New System.Drawing.Size(696, 438)
+        Me.oblLISTPLAYER.TabIndex = 136
+        Me.oblLISTPLAYER.UseCompatibleStateImageBehavior = False
+        Me.oblLISTPLAYER.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "INDEX"
+        Me.ColumnHeader1.Width = 54
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "IMAGEN"
+        Me.ColumnHeader2.Width = 148
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "FONDO"
+        Me.ColumnHeader3.Width = 164
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "VIDEO 1"
+        Me.ColumnHeader7.Width = 152
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "VIDEO 2"
+        Me.ColumnHeader8.Width = 294
+        '
+        'PicElementPlayer
+        '
+        Me.PicElementPlayer.Location = New System.Drawing.Point(750, 92)
+        Me.PicElementPlayer.Name = "PicElementPlayer"
+        Me.PicElementPlayer.Size = New System.Drawing.Size(127, 84)
+        Me.PicElementPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicElementPlayer.TabIndex = 135
+        Me.PicElementPlayer.TabStop = False
+        '
+        'PicFondoPlayer
+        '
+        Me.PicFondoPlayer.Location = New System.Drawing.Point(720, 67)
+        Me.PicFondoPlayer.Name = "PicFondoPlayer"
+        Me.PicFondoPlayer.Size = New System.Drawing.Size(333, 141)
+        Me.PicFondoPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicFondoPlayer.TabIndex = 134
+        Me.PicFondoPlayer.TabStop = False
+        '
         'Button22
         '
         Me.Button22.Location = New System.Drawing.Point(201, 28)
@@ -573,111 +678,6 @@ Partial Class ScreenControl
         Me.cmbEmision.Name = "cmbEmision"
         Me.cmbEmision.Size = New System.Drawing.Size(177, 28)
         Me.cmbEmision.TabIndex = 2
-        '
-        'PicElementPlayer
-        '
-        Me.PicElementPlayer.Location = New System.Drawing.Point(750, 92)
-        Me.PicElementPlayer.Name = "PicElementPlayer"
-        Me.PicElementPlayer.Size = New System.Drawing.Size(127, 84)
-        Me.PicElementPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicElementPlayer.TabIndex = 135
-        Me.PicElementPlayer.TabStop = False
-        '
-        'PicFondoPlayer
-        '
-        Me.PicFondoPlayer.Location = New System.Drawing.Point(720, 67)
-        Me.PicFondoPlayer.Name = "PicFondoPlayer"
-        Me.PicFondoPlayer.Size = New System.Drawing.Size(333, 141)
-        Me.PicFondoPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicFondoPlayer.TabIndex = 134
-        Me.PicFondoPlayer.TabStop = False
-        '
-        'oblLISTPLAYER
-        '
-        Me.oblLISTPLAYER.BackColor = System.Drawing.Color.LightGray
-        Me.oblLISTPLAYER.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader8})
-        Me.oblLISTPLAYER.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.oblLISTPLAYER.ForeColor = System.Drawing.Color.Gray
-        Me.oblLISTPLAYER.FullRowSelect = True
-        Me.oblLISTPLAYER.GridLines = True
-        Me.oblLISTPLAYER.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.oblLISTPLAYER.HideSelection = False
-        Me.oblLISTPLAYER.Location = New System.Drawing.Point(18, 67)
-        Me.oblLISTPLAYER.Name = "oblLISTPLAYER"
-        Me.oblLISTPLAYER.Size = New System.Drawing.Size(696, 438)
-        Me.oblLISTPLAYER.TabIndex = 136
-        Me.oblLISTPLAYER.UseCompatibleStateImageBehavior = False
-        Me.oblLISTPLAYER.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "INDEX"
-        Me.ColumnHeader1.Width = 54
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "IMAGEN"
-        Me.ColumnHeader2.Width = 148
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "FONDO"
-        Me.ColumnHeader3.Width = 164
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "VIDEO 1"
-        Me.ColumnHeader7.Width = 152
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "VIDEO 2"
-        Me.ColumnHeader8.Width = 294
-        '
-        'btnDownPlayer
-        '
-        Me.btnDownPlayer.BackColor = System.Drawing.Color.LightSlateGray
-        Me.btnDownPlayer.BackgroundImage = CType(resources.GetObject("btnDownPlayer.BackgroundImage"), System.Drawing.Image)
-        Me.btnDownPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDownPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDownPlayer.ForeColor = System.Drawing.Color.Transparent
-        Me.btnDownPlayer.Location = New System.Drawing.Point(720, 406)
-        Me.btnDownPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnDownPlayer.Name = "btnDownPlayer"
-        Me.btnDownPlayer.Size = New System.Drawing.Size(20, 33)
-        Me.btnDownPlayer.TabIndex = 138
-        Me.btnDownPlayer.UseVisualStyleBackColor = False
-        '
-        'btnUpPlayer
-        '
-        Me.btnUpPlayer.BackColor = System.Drawing.Color.LightSlateGray
-        Me.btnUpPlayer.BackgroundImage = CType(resources.GetObject("btnUpPlayer.BackgroundImage"), System.Drawing.Image)
-        Me.btnUpPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUpPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpPlayer.ForeColor = System.Drawing.Color.Transparent
-        Me.btnUpPlayer.Image = CType(resources.GetObject("btnUpPlayer.Image"), System.Drawing.Image)
-        Me.btnUpPlayer.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnUpPlayer.Location = New System.Drawing.Point(720, 365)
-        Me.btnUpPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnUpPlayer.Name = "btnUpPlayer"
-        Me.btnUpPlayer.Size = New System.Drawing.Size(20, 33)
-        Me.btnUpPlayer.TabIndex = 137
-        Me.btnUpPlayer.UseVisualStyleBackColor = False
-        '
-        'btnBorrarPlayer
-        '
-        Me.btnBorrarPlayer.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.btnBorrarPlayer.BackgroundImage = CType(resources.GetObject("btnBorrarPlayer.BackgroundImage"), System.Drawing.Image)
-        Me.btnBorrarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBorrarPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrarPlayer.Image = CType(resources.GetObject("btnBorrarPlayer.Image"), System.Drawing.Image)
-        Me.btnBorrarPlayer.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnBorrarPlayer.Location = New System.Drawing.Point(720, 247)
-        Me.btnBorrarPlayer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnBorrarPlayer.Name = "btnBorrarPlayer"
-        Me.btnBorrarPlayer.Size = New System.Drawing.Size(24, 33)
-        Me.btnBorrarPlayer.TabIndex = 139
-        Me.btnBorrarPlayer.UseVisualStyleBackColor = False
         '
         'ScreenControl
         '
